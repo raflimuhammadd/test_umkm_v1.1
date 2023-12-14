@@ -19,7 +19,7 @@ nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 
-with open('./content/umkm.json') as content:
+with open('./content/umkm.json', encoding='utf-8') as content:
     dataset = json.load(content)
 
 app = Flask(__name__)
