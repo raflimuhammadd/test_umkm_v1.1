@@ -133,7 +133,11 @@ def predict():
         response_tag = le.inverse_transform([output])[0]
         response_text = random.choice(responses[response_tag])
         
-        return jsonify({"response": {"response_text": response_text, "section": response_tag}})
+        return jsonify({"response": 
+            {"response_text": response_text, 
+             "section": response_tag,
+             "status_code": 200
+             }})
 
 if __name__ == "__main__":
     app.run(debug=True)
